@@ -17,6 +17,7 @@ const uiTranslations = {
     viewProject: "Ver Proyecto →",
     contactTitle: "Hablemos",
     contactDesc: "¿Tienes una propuesta o quieres colaborar en algún proyecto? Contáctame a través de mis canales oficiales:",
+    credits: "Diseñado y desarrollado por",
     rights: "Todos los derechos reservados."
   },
   en: {
@@ -32,6 +33,7 @@ const uiTranslations = {
     viewProject: "View Project →",
     contactTitle: "Let's Talk",
     contactDesc: "Do you have a proposal or want to collaborate on a project? Reach out through my official channels:",
+    credits: "Designed and developed by",
     rights: "All rights reserved."
   }
 };
