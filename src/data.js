@@ -43,9 +43,9 @@ export const cvData = {
       }
     ],
     // A highlighted hero phrase / summary for the About section (optional)
-    aboutSummary: "This is a demo page.",
+    aboutSummary: "This is a demo page. Use this section to highlight something importan about yourself.",
     // Detailed description for the About section
-    about: "Here es a beautiful CV of a fake person. Scroll down to see the author, an actual person."
+    about: "Here is a beautiful CV of a fake person. Scroll down, to the bottom of the page, to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either."
   },
 
   experience: [
