@@ -25,7 +25,7 @@ function initTheme() {
     if (themeToggleDesktop) themeToggleDesktop.style.display = 'block';
     if (themeToggleMobile) themeToggleMobile.style.display = 'block';
     
-    // Validate localstorage or preference
+    // Validate localStorage or preference
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
     } else {

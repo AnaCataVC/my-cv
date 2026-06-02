@@ -1,13 +1,13 @@
 export const cvData = {
   config: {
-    // Primary interface language ("es" or "en"), default is english.
+    // Primary interface language ("es" or "en"), default is English.
     lang: "en",
 
     // Page color mode. Options: 
     // "light" (always light), 
     // "dark" (always dark), 
     // "toggle" (shows the button to switch themes)
-    themeMode: "dark"
+    themeMode: "toggle"
   },
 
   personalInfo: {
@@ -25,7 +25,7 @@ export const cvData = {
       // "current-role" (purple dot - currently employed, e.g., "Engineer @ Company")
       // "hidden"       (hides this indicator completely)
       type: "current-role",
-      text: "employed @ best company ever"
+      text: "Employed @ Best Company Ever"
     },
     email: "hello@example.com",
     location: "Remote, Earth",
@@ -43,9 +43,9 @@ export const cvData = {
       }
     ],
     // A highlighted hero phrase / summary for the About section (optional)
-    aboutSummary: "This is a demo page. Use this section to highlight something importan about yourself.",
+    aboutSummary: "This is a demo page. Use this section to highlight something important about yourself.",
     // Detailed description for the About section
-    about: "Here is a beautiful CV of a fake person. Scroll down, to the bottom of the page, to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either."
+    about: "Here is a beautiful CV of a fake person. Scroll down to the bottom of the page to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either."
   },
 
   experience: [
@@ -53,15 +53,22 @@ export const cvData = {
       company: "Tech Innovations Inc.",
       role: "Frontend Developer",
       period: "2023 - Present",
-      description: "Led the migration to a modern frontend stack using React and Tailwind CSS. Improved performance metrics by 40%.",
-      tags: ["React", "Tailwind", "TypeScript"]
+      description: "Led the migration of a legacy frontend architecture to a modern stack using React, TypeScript, and Tailwind CSS, improving Lighthouse performance scores by 45%. Established clean coding standards, conducted peer code reviews, and implemented responsive design patterns across all core platforms. Collaborated with UX designers to develop a reusable component library, cutting page build times in half.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Redux", "Webpack"]
     },
     {
       company: "Creative Agency",
       role: "Web Designer",
       period: "2021 - 2023",
-      description: "Designed and developed highly interactive marketing sites for various clients.",
-      tags: ["Figma", "HTML", "CSS", "Vanilla JS"]
+      description: "Designed and developed highly interactive marketing sites and e-commerce platforms for national clients. Translated Figma mockups into pixel-perfect, accessible HTML/CSS and vanilla JavaScript. Optimized assets and scripts to ensure high-performance animations and fast load times across mobile and desktop devices.",
+      tags: ["Figma", "HTML5", "CSS3", "JavaScript (ES6)", "Vanilla JS"]
+    },
+    {
+      company: "Global Solutions Ltd.",
+      role: "Junior Web Developer",
+      period: "2019 - 2021",
+      description: "Assisted in maintaining corporate websites, developed interactive HTML email newsletters, and optimized CSS layouts for cross-browser compatibility. Worked closely with senior developers to implement UI features and improve site speed by 25%.",
+      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
     }
   ],
 
@@ -70,17 +77,17 @@ export const cvData = {
       institution: "University of Technology",
       degree: "B.S. in Computer Science",
       period: "2017 - 2021",
-      description: "Graduated with honors. Minor in Graphic Design."
+      description: "Graduated Magna Cum Laude. Specialized in Software Engineering. Recipient of the Academic Excellence Scholarship. Active member of the Computer Science Student Association and design workshop tutor."
     }
   ],
 
   internships: [
     {
-      company: "Tech Startup",
+      company: "Innovate Labs",
       role: "Frontend Intern",
       period: "Summer 2020",
-      description: "Assisted in building UI components using React and styled-components.",
-      tags: ["React", "JavaScript"]
+      description: "Collaborated within an agile team of 5 developers to build and test responsive UI components using React and styled-components. Contributed to documentation and improved unit test coverage by 15% using Jest.",
+      tags: ["React", "JavaScript", "Styled Components", "Jest"]
     }
   ],
 
@@ -89,6 +96,18 @@ export const cvData = {
       title: "AWS Certified Developer – Associate",
       issuer: "Amazon Web Services",
       date: "2023",
+      url: "#"
+    },
+    {
+      title: "Professional Scrum Developer",
+      issuer: "Scrum.org",
+      date: "2022",
+      url: "#"
+    },
+    {
+      title: "Google UX Design Certificate",
+      issuer: "Coursera",
+      date: "2021",
       url: "#"
     }
   ],
@@ -100,6 +119,13 @@ export const cvData = {
       date: "Jan 2024",
       description: "An overview of how SSG and SPA patterns are merging.",
       url: "#"
+    },
+    {
+      title: "Responsive Typography in Modern Web Design",
+      publisher: "Design Weekly",
+      date: "Nov 2022",
+      description: "Best practices for utilizing fluid type and variable fonts for optimal reading experiences across diverse screen sizes.",
+      url: "#"
     }
   ],
 
@@ -109,6 +135,18 @@ export const cvData = {
       description: "A customizable portfolio template built with Vite, Alpine.js, and Tailwind CSS.",
       url: "https://github.com/",
       tags: ["Vite", "Alpine.js", "Tailwind"]
+    },
+    {
+      title: "DevFlow - Developer Task Manager",
+      description: "A collaborative Kanban-style task management web application built with React, Node.js, and MongoDB. Features real-time updates via Socket.io, drag-and-drop task manipulation, and GitHub OAuth integration.",
+      url: "https://github.com/",
+      tags: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"]
+    },
+    {
+      title: "OptiStore E-Commerce Dashboard",
+      description: "A high-performance sales analytics dashboard built with Next.js and Chart.js. Integrates with Stripe API to display real-time transaction volume, subscription metrics, and customer churn analysis.",
+      url: "https://github.com/",
+      tags: ["Next.js", "React", "Chart.js", "Stripe API", "Tailwind CSS"]
     }
   ],
 
@@ -119,8 +157,15 @@ export const cvData = {
     "CSS3",
     "Tailwind CSS",
     "React",
-    "Alpine.js",
+    "Next.js",
+    "Node.js",
+    "Redux",
+    "Jest",
+    "MongoDB",
+    "SQL",
     "Git",
-    "Figma"
+    "Figma",
+    "Responsive Design"
   ]
 };
+
