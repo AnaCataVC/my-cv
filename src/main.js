@@ -9,7 +9,7 @@ function initTheme() {
   const lightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
   const darkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
 
-  // Aplicar modo forzado o toggle según config
+  // Apply forced mode or toggle according to config
   const mode = cvData.config.themeMode;
   
   if (mode === 'light') {
@@ -25,7 +25,7 @@ function initTheme() {
     if (themeToggleDesktop) themeToggleDesktop.style.display = 'block';
     if (themeToggleMobile) themeToggleMobile.style.display = 'block';
     
-    // Validar localstorage o preferencia
+    // Validate localstorage or preference
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
     } else {

@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Configuramos la paleta primary genérica, por defecto slate
+        // Configure the generic primary palette, default is slate
         primary: colors.slate,
         neutralBase: colors.zinc,
       },
