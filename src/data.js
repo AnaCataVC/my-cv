@@ -24,8 +24,8 @@ export const cvData = {
       // "freelancer"   (blue dot - available for freelance projects/consulting)
       // "current-role" (purple dot - currently employed, e.g., "Engineer @ Company")
       // "hidden"       (hides this indicator completely)
-      type: "open-to-work",
-      text: "Hire me!"
+      type: "current-role",
+      text: "employed @ best company ever"
     },
     email: "hello@example.com",
     location: "Remote, Earth",
@@ -40,16 +40,12 @@ export const cvData = {
       {
         platform: "GitHub",
         url: "https://github.com/",
-      },
-      {
-        platform: "Instagram",
-        url: "https://instagram.com/",
       }
     ],
     // A highlighted hero phrase / summary for the About section (optional)
-    aboutSummary: "Building digital experiences that combine robust engineering with elegant, user-centric design.",
+    aboutSummary: "This is a demo page.",
     // Detailed description for the About section
-    about: "A passionate developer building accessible, beautiful, and performant web experiences. Always learning and open to new challenges."
+    about: "Here es a beautiful CV of a fake person. Scroll down to see the author, an actual person."
   },
 
   experience: [
