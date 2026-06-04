@@ -108,7 +108,9 @@ El archivo está documentado paso a paso, pero aquí tienes un vistazo rápido d
 - `config.lang`: Idioma principal de la interfaz (`"es"` o `"en"`). No distingue entre mayúsculas y minúsculas (ej. `"EN"` o `"en"` funcionan igual). Si se especifica un idioma inválido o ausente, se utilizará inglés (`"en"`) por defecto.
 - `config.themeMode`: `"toggle"`, `"light"` o `"dark"`.
 - `personalInfo.status.type`: Configura un pequeño aviso bajo tu foto (`"open-to-work"`, `"freelancer"`, `"current-role"` o `"hidden"`).
-- `personalInfo.socials`: Lista de redes sociales. Solo se renderizan las plataformas soportadas: `LinkedIn`, `GitHub`, `Instagram`, `YouTube`, `Twitter`, `X`, `Facebook`, `Twitch`, `TikTok`, `Medium`, `Behance`, `Dribbble`, `Website`, `Portfolio` y `Link` (insensible a mayúsculas/minúsculas). Cualquier plataforma no soportada se ignorará automáticamente para proteger la consistencia del diseño.
+- `personalInfo.socials`: Lista de redes de contacto. Plataformas soportadas: `LinkedIn`, `Instagram`, `YouTube`, `Twitter`, `X`, `Facebook`, `Twitch`, `TikTok`, `Medium`.
+- `personalInfo.portfolio`: Lista de perfiles de trabajo. Plataformas soportadas: `GitHub`, `Behance`, `Dribbble`, `Website`, `Portfolio`, `Link`.
+  (En ambos casos es insensible a mayúsculas/minúsculas y cualquier plataforma no soportada se ignorará automáticamente).
 
 ---
 

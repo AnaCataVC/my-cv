@@ -29,14 +29,19 @@ export const cvData = {
     },
     email: "hello@example.com",
     location: "Remote, Earth",
-    // Social media links. Supported platforms:
-    // "LinkedIn", "GitHub", "Instagram", "YouTube", "Twitter", "X", "Facebook", "Twitch", "TikTok", "Medium", "Behance", "Dribbble", "Website", "Portfolio", "Link"
+    // Social media and contact links. Supported platforms:
+    // "LinkedIn", "Instagram", "YouTube", "Twitter", "X", "Facebook", "Twitch", "TikTok", "Medium"
     // Case-insensitive. Unsupported platforms will not be rendered.
     socials: [
       {
         platform: "LinkedIn",
         url: "https://linkedin.com/in/",
-      },
+      }
+    ],
+    // Portfolio and work links. Supported platforms:
+    // "GitHub", "Behance", "Dribbble", "Website", "Portfolio", "Link"
+    // Case-insensitive. Unsupported platforms will not be rendered.
+    portfolio: [
       {
         platform: "GitHub",
         url: "https://github.com/",

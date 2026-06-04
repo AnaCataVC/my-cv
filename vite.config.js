@@ -19,6 +19,8 @@ const uiTranslations = {
     viewCertification: "Ver Certificación →",
     contactTitle: "Hablemos",
     contactDesc: "¿Tienes una propuesta o quieres colaborar en algún proyecto? Contáctame a través de mis canales oficiales:",
+    portfolioLinksTitle: "Mira Mi Trabajo",
+    portfolioLinksDesc: "Explora mi trabajo y proyectos en los siguientes enlaces:",
     credits: "Diseñado y desarrollado por",
     rights: "Todos los derechos reservados.",
     toggleTheme: "Cambiar tema",
@@ -39,6 +41,8 @@ const uiTranslations = {
     viewCertification: "View Certification →",
     contactTitle: "Let's Talk",
     contactDesc: "Do you have a proposal or want to collaborate on a project? Reach out through my official channels:",
+    portfolioLinksTitle: "Check Out My Work",
+    portfolioLinksDesc: "Explore my work and projects through the following links:",
     credits: "Designed and developed by",
     rights: "All rights reserved.",
     toggleTheme: "Toggle theme",
@@ -66,11 +70,19 @@ const supportedPlatforms = {
 };
 
 // Process socials and filter out unsupported platforms
-const processedSocials = (cvData.personalInfo?.socials || [])
+const contactSocials = (cvData.personalInfo?.socials || [])
   .map(social => {
     const key = (social.platform || '').toLowerCase().trim();
     const icon = supportedPlatforms[key];
-    return icon ? { ...social, icon } : null;
+    return icon ? { ...social, icon, key } : null;
+  })
+  .filter(Boolean);
+
+const portfolioSocials = (cvData.personalInfo?.portfolio || [])
+  .map(social => {
+    const key = (social.platform || '').toLowerCase().trim();
+    const icon = supportedPlatforms[key];
+    return icon ? { ...social, icon, key } : null;
   })
   .filter(Boolean);
 
@@ -90,7 +102,8 @@ export default defineConfig({
           },
           personalInfo: {
             ...cvData.personalInfo,
-            socials: processedSocials
+            contactSocials,
+            portfolioSocials
           }
         },
         ui: uiTranslations[resolvedLang]
