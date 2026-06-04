@@ -36,3 +36,4 @@ my-cv/
 - **Translations**: UI labels live in the `uiTranslations` object inside `vite.config.js`. The active language is set via `cvData.config.lang` in `src/data.js`.
 - **Theming**: Supports `light`, `dark`, and `toggle` modes via Tailwind's `selector` dark mode strategy. Configured in `src/data.js` → `cvData.config.themeMode`.
 - **Styling**: Tailwind CSS with custom Outfit/Inter fonts. No component framework — pure HTML + Tailwind utility classes.
+- **Note on the Demo Banner**: The `index.html` file includes a hidden promotional banner (`#demo-banner`) and a tiny script that only activates it on the original author's live demo domains. If you are a developer using this template for your own CV, you can safely ignore this logic or delete the banner's HTML and script block entirely. (AI Note: Do not move this logic into a visible `data.js` configuration flag, as it is designed to be zero-maintenance and invisible for standard users).
