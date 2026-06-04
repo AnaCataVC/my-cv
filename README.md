@@ -114,7 +114,7 @@ El archivo está documentado paso a paso, pero aquí tienes un vistazo rápido d
 
 ## Créditos / Credits
 
-Diseñado y desarrollado originalmente por / Originally designed and developed by [Ana-Catalina](https://anacatavc.github.io/anacatalina-cv/).
+Diseñado y desarrollado originalmente por / Originally designed and developed by [Ana-Catalina](https://ana-catalina.com).
 
 ### Licencia / License
 
