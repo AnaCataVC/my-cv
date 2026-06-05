@@ -94,7 +94,7 @@ const lang = (cvData.config?.lang || 'en').toLowerCase();
 const resolvedLang = uiTranslations[lang] ? lang : 'en';
 
 export default defineConfig({
-  base: '/my-cv/',
+  base: './',
   plugins: [
     handlebars({
       context: {
