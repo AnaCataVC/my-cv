@@ -24,9 +24,7 @@ const uiTranslations = {
     credits: "Diseñado y desarrollado por",
     rights: "Todos los derechos reservados.",
     toggleTheme: "Cambiar tema",
-    backToTop: "Volver arriba",
-    demoBannerText: "✨ ¿Te gusta esta plantilla?",
-    demoBannerBtn: "Obtener en GitHub"
+    backToTop: "Volver arriba"
   },
   en: {
     about: "About Me",
@@ -48,9 +46,7 @@ const uiTranslations = {
     credits: "Designed and developed by",
     rights: "All rights reserved.",
     toggleTheme: "Toggle theme",
-    backToTop: "Back to top",
-    demoBannerText: "✨ Like this template?",
-    demoBannerBtn: "Get it on GitHub"
+    backToTop: "Back to top"
   }
 };
 
