@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import colors from 'tailwindcss/colors';
+import { cvData } from './src/data.js';
 
 export default {
   darkMode: 'selector',
@@ -10,9 +11,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Configure the generic primary palette, default is slate
-        primary: colors.slate,
-        neutralBase: colors.zinc,
+        // Reads colors from src/data.js config
+        primary: colors[cvData.config?.primaryColor] || colors.slate,
+        neutralBase: colors[cvData.config?.neutralColor] || colors.zinc,
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'sans-serif'],

@@ -7,7 +7,15 @@ export const cvData = {
     // "light" (always light), 
     // "dark" (always dark), 
     // "toggle" (shows the button to switch themes)
-    themeMode: "toggle"
+    themeMode: "toggle",
+
+    // primaryColor: Controls the main aesthetic of the CV (text colors, main buttons, background tints).
+    // Recommended options: 'slate', 'indigo', 'emerald', 'blue', 'violet', or 'rose'.
+    primaryColor: "slate",
+
+    // neutralColor: Controls the subtle background colors, borders, and shadows.
+    // Recommended options: 'zinc', 'slate', 'gray', 'neutral', 'stone'.
+    neutralColor: "zinc"
   },
 
   personalInfo: {
