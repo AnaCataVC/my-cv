@@ -16,7 +16,10 @@ export const cvData = {
 
     // Path to your photo. Can be an absolute web URL or relative like "./placeholder-photo.png"
     // Leave it as an empty string ("") if you want to hide the profile photo.
-    photoPath: "./placeholder-photo.png",
+    photoPath: "./profile-photo.png",
+
+    // Path to your favicon. Can be an absolute web URL or relative like "./cv-icon.svg"
+    faviconPath: "./cv-icon.svg",
 
     status: {
       // Status indicator options:
@@ -50,7 +53,7 @@ export const cvData = {
     // A highlighted hero phrase / summary for the About section (optional)
     aboutSummary: "This is a demo page. Use this section to highlight something important about yourself.",
     // Detailed description for the About section
-    about: "Here is a beautiful CV of a fake person. Scroll down to the bottom of the page to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either."
+    about: "Here is a beautiful CV of a fake person. Scroll down to the bottom of the page to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either. Get this template <a href='https://github.com/AnaCataVC/my-cv'>here</a>"
   },
 
   experience: [
