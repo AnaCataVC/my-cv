@@ -21,9 +21,11 @@ A modern, minimalist, and fully customizable web curriculum vitae. Built with Vi
 - **Styling:** Tailwind CSS (Zinc/Slate palette)
 - **Deployment:** GitHub Pages (via GitHub Actions) & Vercel
 
-### 3. Key Learnings
-The main challenge and learning from this project was:
-- **Configurability:** Making a pure SSG template easily configurable for anyone. I adapted the complex design I previously created for my personal CV (`anacatalina-cv`) into a modular system where users only need to edit a single `src/data.js` file, without touching any HTML/CSS.
+### 3. Key Features & Learnings
+- **Dynamic Theming (v1.1.0):** Users can now choose any Tailwind color palette for their CV just by changing `primaryColor` and `neutralColor` in `data.js`.
+- **Rich Configurability:** A pure SSG template easily configurable for anyone. Adapted a complex design into a modular system where users only edit a single `src/data.js` file, without touching HTML/CSS.
+- **Custom Assets (v1.1.0):** Dynamic custom favicon and profile photo configuration.
+- **Enhanced UI (v1.1.0):** Optional portfolio action button in the hero section and support for links inside the About Me section.
 
 ### 4. How to Use / Local Setup Instructions
 1. **Clone or Fork this repository**
@@ -65,9 +67,11 @@ Un currículum vitae web moderno, minimalista y completamente personalizable. Co
 - **Estilos:** Tailwind CSS (Paleta Zinc/Slate)
 - **Despliegue:** GitHub Pages (vía GitHub Actions) & Vercel
 
-### 3. Aprendizajes Destacados
-El principal desafío y aprendizaje técnico de este proyecto fue:
-- **Configurabilidad:** Hacer que la plantilla fuera fácilmente configurable para cualquier persona. Logré adaptar y abstraer el diseño que ya había creado para mi CV personal (`anacatalina-cv`) de manera que los usuarios solo tuvieran que editar un único archivo `src/data.js` sin tocar HTML ni código complejo.
+### 3. Características Clave y Aprendizajes
+- **Temas Dinámicos (v1.1.0):** Los usuarios ahora pueden elegir cualquier paleta de colores de Tailwind para su CV cambiando `primaryColor` y `neutralColor` en `data.js`.
+- **Configurabilidad Total:** Una plantilla SSG fácilmente configurable para cualquier persona. Adapté un diseño complejo a un sistema modular donde solo editas el archivo `src/data.js` sin tocar HTML ni CSS.
+- **Recursos Personalizables (v1.1.0):** Configuración dinámica del favicon y foto de perfil.
+- **Interfaz Mejorada (v1.1.0):** Botón opcional de portafolio en la cabecera y soporte para enlaces en la sección Sobre Mí.
 
 ### 4. Cómo Utilizar / Instrucciones Locales
 1. **Clona o haz Fork de este repositorio**
