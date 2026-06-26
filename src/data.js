@@ -59,9 +59,9 @@ export const cvData = {
       }
     ],
     // A highlighted hero phrase / summary for the About section (optional)
-    aboutSummary: "This is a demo page. Use this section to highlight something important about yourself.",
+    aboutSummary: "This is a demo page, not a real person's CV. Use this section to highlight something important about yourself.",
     // Detailed description for the About section
-    about: "Here is a beautiful CV of a fake person. Scroll down to the bottom of the page to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either. Get this template <a href='https://github.com/AnaCataVC/my-cv'>here</a>"
+    about: "Here is a beautiful CV of a fake person. Scroll down to the bottom of the page to see the author, an actual person. In this paragraph you should write about your skills, experience and goals. Keep it concise: not too long, but not too short either. Get this template <a href='https://github.com/AnaCataVC/my-cv'>here</a>, and customize it!"
   },
 
   experience: [
@@ -115,12 +115,6 @@ export const cvData = {
       url: "#"
     },
     {
-      title: "Professional Scrum Developer",
-      issuer: "Scrum.org",
-      date: "2022",
-      url: "#"
-    },
-    {
       title: "Google UX Design Certificate",
       issuer: "Coursera",
       date: "2021",
@@ -146,12 +140,6 @@ export const cvData = {
   ],
 
   projects: [
-    {
-      title: "Portfolio Template",
-      description: "A customizable portfolio template built with Vite, Alpine.js, and Tailwind CSS.",
-      url: "https://github.com/",
-      tags: ["Vite", "Alpine.js", "Tailwind"]
-    },
     {
       title: "DevFlow - Developer Task Manager",
       description: "A collaborative Kanban-style task management web application built with React, Node.js, and MongoDB. Features real-time updates via Socket.io, drag-and-drop task manipulation, and GitHub OAuth integration.",

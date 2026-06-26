@@ -1,0 +1,22 @@
+<div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700 space-y-4">
+  {{#if subtitle}}
+    <h4 class="text-sm font-bold text-primary-500 dark:text-primary-400">{{subtitle}}</h4>
+  {{/if}}
+  <h3 class="text-lg font-bold text-primary-900 dark:text-white">{{title}}</h3>
+  {{#if date}}
+    <p class="text-xs text-primary-500 font-semibold uppercase tracking-wider mt-0.5">{{date}}</p>
+  {{/if}}
+  {{#if description}}
+    <p class="text-sm text-primary-600 dark:text-primary-400 mt-2">{{{description}}}</p>
+  {{/if}}
+  {{#if url}}
+    <a href="{{url}}" target="_blank" class="text-sm font-medium text-primary-800 dark:text-primary-200 hover:underline">{{linkText}}</a>
+  {{/if}}
+  {{#if tags}}
+    <div class="flex flex-wrap gap-2 mt-4">
+      {{#each tags}}
+        <span class="px-2 py-1 text-xs rounded-md bg-neutralBase-50 dark:bg-neutralBase-900/60 text-primary-600 dark:text-primary-300">{{this}}</span>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>

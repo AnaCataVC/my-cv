@@ -1,0 +1,17 @@
+<div class="w-full sm:w-[340px] p-6 bg-white dark:bg-primary-800 rounded-2xl border border-primary-100 dark:border-primary-700 flex items-center space-x-4 hover:shadow-md transition-shadow">
+  <div class="p-3 bg-primary-200 dark:bg-primary-800 rounded-xl text-primary-800 dark:text-primary-200">
+    <div class="w-6 h-6">
+      {{{icon}}}
+    </div>
+  </div>
+  <div class="overflow-hidden">
+    <span class="text-xs font-bold text-primary-400 uppercase">{{platform}}</span>
+    <p class="text-sm sm:text-base font-bold text-primary-900 dark:text-white mt-1 truncate">
+      {{#if isEmail}}
+        <a href="mailto:{{url}}" class="hover:underline">{{url}}</a>
+      {{else}}
+        <a href="{{url}}" target="_blank" class="hover:underline">{{url}}</a>
+      {{/if}}
+    </p>
+  </div>
+</div>

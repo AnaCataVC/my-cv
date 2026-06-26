@@ -34,38 +34,17 @@
           
           <div class="hidden md:flex items-center space-x-6">
             <div class="ml-10 flex items-baseline space-x-6">
-              <a href="#experiencia" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.experience}}</a>
-              <a href="#educacion" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.education}}</a>
-              <a href="#proyectos" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.projects}}</a>
-              <a href="#habilidades" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.skills}}</a>
-              {{#if (hasElements cv.personalInfo.portfolioSocials)}}
-                <a href="#portafolio" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.portfolioLinksTitle}}</a>
-              {{/if}}
-              <a href="#contacto" class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors">{{ui.contactTitle}}</a>
+              {{> nav-links class="text-sm font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white transition-colors" }}
             </div>
             
             <!-- Theme Toggle Button -->
-            <button id="theme-toggle-desktop" class="p-2 rounded-xl bg-white dark:bg-primary-800 border border-primary-200 dark:border-primary-700 shadow-sm hover:shadow text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white focus:outline-none transition-all duration-200" aria-label="{{ui.toggleTheme}}">
-              <svg id="theme-toggle-light-icon-desktop" class="hidden w-5 h-5 transition-transform duration-300 rotate-0 dark:rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-              </svg>
-              <svg id="theme-toggle-dark-icon-desktop" class="hidden w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg>
-            </button>
+            {{> theme-toggle id="theme-toggle-desktop" idLightIcon="theme-toggle-light-icon-desktop" idDarkIcon="theme-toggle-dark-icon-desktop" }}
           </div>
 
           <!-- Mobile Menu Button and Mobile Theme Toggle -->
           <div class="flex items-center space-x-2 md:hidden">
             <!-- Mobile Theme Toggle Button -->
-            <button id="theme-toggle-mobile" class="p-2 rounded-xl bg-white dark:bg-primary-800 border border-primary-200 dark:border-primary-700 shadow-sm hover:shadow text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white focus:outline-none transition-all duration-200" aria-label="{{ui.toggleTheme}}">
-              <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5 transition-transform duration-300 rotate-0 dark:rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-              </svg>
-              <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-              </svg>
-            </button>
+            {{> theme-toggle id="theme-toggle-mobile" idLightIcon="theme-toggle-light-icon-mobile" idDarkIcon="theme-toggle-dark-icon-mobile" }}
             
             <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-xl text-primary-600 dark:text-primary-300 hover:bg-primary-100 dark:hover:bg-primary-800 focus:outline-none transition-colors" aria-expanded="false">
               <svg class="h-6 w-6" id="menu-icon" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -82,14 +61,7 @@
       <!-- Mobile Navigation Drawer -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-primary-200/50 dark:border-primary-800/50 bg-white/95 dark:bg-neutralBase-900/95 backdrop-blur-md transition-all duration-300 ease-in-out">
         <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-          <a href="#experiencia" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.experience}}</a>
-          <a href="#educacion" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.education}}</a>
-          <a href="#proyectos" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.projects}}</a>
-          <a href="#habilidades" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.skills}}</a>
-          {{#if (hasElements cv.personalInfo.portfolioSocials)}}
-            <a href="#portafolio" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.portfolioLinksTitle}}</a>
-          {{/if}}
-          <a href="#contacto" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all">{{ui.contactTitle}}</a>
+          {{> nav-links class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-primary-600 dark:text-primary-300 hover:text-primary-900 dark:hover:text-white hover:bg-primary-50 dark:hover:bg-primary-800/50 transition-all" }}
         </div>
       </div>
     </nav>
@@ -233,28 +205,14 @@
         <div class="max-w-4xl mx-auto">
           <div class="relative border-l border-primary-200 dark:border-primary-700 ml-4 md:ml-6 space-y-12">
             {{#each cv.experience}}
-              <div class="relative pl-8 md:pl-10">
-                <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full border-2 border-white dark:border-neutralBase-900 bg-primary-600 z-10"></div>
-                <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700">
-                  <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-                    <div>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-100 dark:bg-primary-700 text-primary-800 dark:text-primary-300">{{company}}</span>
-                      <h3 class="text-xl font-bold text-primary-900 dark:text-white mt-1.5">{{role}}</h3>
-                    </div>
-                    <div class="text-right">
-                      <span class="text-xs font-bold text-primary-500 dark:text-primary-400 bg-primary-100 dark:bg-primary-700 px-3 py-1 rounded-full uppercase tracking-wider">{{period}}</span>
-                    </div>
-                  </div>
-                  <p class="text-sm text-primary-600 dark:text-primary-300">{{{description}}}</p>
-                  {{#if tags}}
-                    <div class="flex flex-wrap gap-2 mt-4">
-                      {{#each tags}}
-                        <span class="px-2 py-1 text-xs rounded-md bg-primary-100 dark:bg-primary-700 text-primary-600 dark:text-primary-300">{{this}}</span>
-                      {{/each}}
-                    </div>
-                  {{/if}}
-                </div>
-              </div>
+              {{> timeline-card 
+                  dotClass="border-white dark:border-neutralBase-900 bg-primary-600"
+                  pillBgClass="bg-primary-100 dark:bg-primary-700"
+                  dateBgClass="bg-primary-100 dark:bg-primary-700"
+                  subtitle=company 
+                  title=role 
+                  date=period 
+              }}
             {{/each}}
           </div>
         </div>
@@ -274,23 +232,14 @@
         <div class="max-w-4xl mx-auto">
           <div class="relative border-l border-primary-200 dark:border-primary-700 ml-4 md:ml-6 space-y-12">
             {{#each cv.education}}
-              <div class="relative pl-8 md:pl-10">
-                <div class="absolute -left-2 top-1.5 w-4 h-4 rounded-full border-2 border-neutralBase-50 dark:border-neutralBase-900 bg-primary-400 dark:bg-primary-500 z-10"></div>
-                <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700">
-                  <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
-                    <div>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white dark:bg-primary-800 text-primary-800 dark:text-primary-300">{{institution}}</span>
-                      <h3 class="text-xl font-bold text-primary-900 dark:text-white mt-1.5">{{degree}}</h3>
-                    </div>
-                    <div class="text-right">
-                      <span class="text-xs font-bold text-primary-500 dark:text-primary-400 bg-white dark:bg-primary-800 px-3 py-1 rounded-full uppercase tracking-wider">{{period}}</span>
-                    </div>
-                  </div>
-                  {{#if description}}
-                    <p class="text-sm text-primary-600 dark:text-primary-300">{{{description}}}</p>
-                  {{/if}}
-                </div>
-              </div>
+              {{> timeline-card 
+                  dotClass="border-neutralBase-50 dark:border-neutralBase-900 bg-primary-400 dark:bg-primary-500"
+                  pillBgClass="bg-white dark:bg-primary-800"
+                  dateBgClass="bg-white dark:bg-primary-800"
+                  subtitle=institution 
+                  title=degree 
+                  date=period 
+              }}
             {{/each}}
           </div>
         </div>
@@ -311,21 +260,7 @@
               <div class="w-16 h-1.5 bg-primary-300 dark:bg-primary-600 rounded-full"></div>
             </div>
             {{#each cv.internships}}
-              <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700 space-y-4">
-                <h4 class="text-sm font-bold text-primary-500 dark:text-primary-400">{{company}}</h4>
-                <h3 class="text-lg font-bold text-primary-900 dark:text-white">{{role}}</h3>
-                <p class="text-xs text-primary-500 font-semibold uppercase tracking-wider mt-0.5">{{period}}</p>
-                {{#if description}}
-                  <p class="text-sm text-primary-600 dark:text-primary-400 mt-2">{{{description}}}</p>
-                {{/if}}
-                {{#if tags}}
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    {{#each tags}}
-                      <span class="px-2 py-1 text-xs rounded-md bg-neutralBase-50 dark:bg-neutralBase-900/60 text-primary-600 dark:text-primary-300">{{this}}</span>
-                    {{/each}}
-                  </div>
-                {{/if}}
-              </div>
+              {{> grid-card subtitle=company title=role date=period }}
             {{/each}}
           </div>
           {{/if}}
@@ -337,14 +272,7 @@
               <div class="w-16 h-1.5 bg-primary-300 dark:bg-primary-600 rounded-full"></div>
             </div>
             {{#each cv.certifications}}
-              <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700 space-y-4">
-                <h4 class="text-sm font-bold text-primary-500 dark:text-primary-400">{{issuer}}</h4>
-                <h3 class="text-lg font-bold text-primary-900 dark:text-white">{{title}}</h3>
-                <p class="text-xs text-primary-500 font-semibold uppercase tracking-wider mt-0.5">{{date}}</p>
-                {{#if url}}
-                  <a href="{{url}}" target="_blank" class="text-sm font-medium text-primary-800 dark:text-primary-200 hover:underline">{{../ui.viewCertification}}</a>
-                {{/if}}
-              </div>
+              {{> grid-card subtitle=issuer title=title date=date linkText=../ui.viewCertification }}
             {{/each}}
           </div>
           {{/if}}
@@ -367,17 +295,7 @@
               <div class="w-16 h-1.5 bg-primary-300 dark:bg-primary-600 rounded-full"></div>
             </div>
             {{#each cv.publications}}
-              <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700 space-y-4">
-                <h4 class="text-sm font-bold text-primary-500 dark:text-primary-400">{{publisher}}</h4>
-                <h3 class="text-lg font-bold text-primary-900 dark:text-white">{{title}}</h3>
-                <p class="text-xs text-primary-500 font-semibold uppercase tracking-wider mt-0.5">{{date}}</p>
-                {{#if description}}
-                  <p class="text-sm text-primary-600 dark:text-primary-400 mt-2">{{description}}</p>
-                {{/if}}
-                {{#if url}}
-                  <a href="{{url}}" target="_blank" class="text-sm font-medium text-primary-800 dark:text-primary-200 hover:underline">{{../ui.viewPublication}}</a>
-                {{/if}}
-              </div>
+              {{> grid-card subtitle=publisher title=title date=date linkText=../ui.viewPublication }}
             {{/each}}
           </div>
           {{/if}}
@@ -389,20 +307,7 @@
               <div class="w-16 h-1.5 bg-primary-300 dark:bg-primary-600 rounded-full"></div>
             </div>
             {{#each cv.projects}}
-              <div class="bg-white dark:bg-primary-800 p-6 rounded-2xl shadow-sm border border-primary-100 dark:border-primary-700 space-y-4">
-                <h3 class="text-lg font-bold text-primary-900 dark:text-white">{{title}}</h3>
-                <p class="text-sm text-primary-600 dark:text-primary-400">{{description}}</p>
-                {{#if url}}
-                  <a href="{{url}}" target="_blank" class="text-sm font-medium text-primary-800 dark:text-primary-200 hover:underline">{{../ui.viewProject}}</a>
-                {{/if}}
-                {{#if tags}}
-                  <div class="flex flex-wrap gap-2 mt-4">
-                    {{#each tags}}
-                      <span class="px-2 py-1 text-xs rounded-md bg-neutralBase-50 dark:bg-neutralBase-900/60 text-primary-600 dark:text-primary-300">{{this}}</span>
-                    {{/each}}
-                  </div>
-                {{/if}}
-              </div>
+              {{> grid-card title=title linkText=../ui.viewProject }}
             {{/each}}
           </div>
           {{/if}}
@@ -427,19 +332,7 @@
 
         <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto items-stretch">
           {{#each cv.personalInfo.portfolioSocials}}
-          <div class="w-full sm:w-[340px] p-6 bg-white dark:bg-primary-800 rounded-2xl border border-primary-100 dark:border-primary-700 flex items-center space-x-4 hover:shadow-md transition-shadow">
-            <div class="p-3 bg-primary-200 dark:bg-primary-800 rounded-xl text-primary-800 dark:text-primary-200">
-              <div class="w-6 h-6">
-                {{{icon}}}
-              </div>
-            </div>
-            <div class="overflow-hidden">
-              <span class="text-xs font-bold text-primary-400 uppercase">{{platform}}</span>
-              <p class="text-sm sm:text-base font-bold text-primary-900 dark:text-white mt-1 truncate">
-                <a href="{{url}}" target="_blank" class="hover:underline">{{url}}</a>
-              </p>
-            </div>
-          </div>
+          {{> social-card }}
           {{/each}}
         </div>
       </div>
@@ -460,19 +353,7 @@
         <div class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto items-stretch">
           
           <!-- Email Card -->
-          <div class="w-full sm:w-[340px] p-6 bg-white dark:bg-primary-800 rounded-2xl border border-primary-100 dark:border-primary-700 flex items-center space-x-4 hover:shadow-md transition-shadow">
-            <div class="p-3 bg-primary-200 dark:bg-primary-800 rounded-xl text-primary-800 dark:text-primary-200">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-            </div>
-            <div class="overflow-hidden">
-              <span class="text-xs font-bold text-primary-400">EMAIL</span>
-              <p class="text-sm sm:text-base font-bold text-primary-900 dark:text-white mt-1 truncate">
-                <a href="mailto:{{cv.personalInfo.email}}" class="hover:underline">{{cv.personalInfo.email}}</a>
-              </p>
-            </div>
-          </div>
+          {{> social-card platform="EMAIL" url=cv.personalInfo.email isEmail=true svgIcon='<svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>' }}
 
           {{#each cv.personalInfo.contactSocials}}
           <div class="w-full sm:w-[340px] p-6 bg-white dark:bg-primary-800 rounded-2xl border border-primary-100 dark:border-primary-700 flex items-center space-x-4 hover:shadow-md transition-shadow">
