@@ -1,3 +1,9 @@
+> **⚠️ Archived / Archivado**
+>
+> This project is no longer maintained.
+>
+> Este proyecto ya no se mantiene.
+
 # Professional CV - Customizable Template
 
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)
